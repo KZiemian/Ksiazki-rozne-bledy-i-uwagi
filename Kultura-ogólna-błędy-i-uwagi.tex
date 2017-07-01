@@ -1,0 +1,722 @@
+\RequirePackage[l2tabu, orthodox]{nag}
+\documentclass[a4paper]{article}
+\usepackage[polish]{babel}
+\usepackage[utf8]{inputenc}
+\usepackage[MeX]{polski}
+\usepackage{microtype}
+\let\lll\undefined
+\usepackage[intlimits]{amsmath}
+\usepackage{amsfonts, amssymb, amscd, amsthm}
+\usepackage{verse}
+\usepackage{xcolor}
+\usepackage{calrsfs} % Lepsze kaligrafowane litery.
+% \DeclareMathAlphabet{\pazocal}{OMS}{zplm}{m}{n}
+\usepackage{vmargin}
+%----------------------------------------------------------------------
+% MARGINS
+%----------------------------------------------------------------------
+\setmarginsrb
+{ 0.7in}  % left margin
+{ 0.6in}  % top margin
+{ 0.7in}  % right margin
+{ 0.8in}  % bottom margin
+{  20pt}  % head height
+{0.25in}  % head sep
+{   9pt}  % foot height
+{ 0.3in}  % foot sep
+\usepackage{hyperref}
+
+
+\newcommand{\spaceOne}{2em}
+\newcommand{\spaceTwo}{1em}
+\newcommand{\spaceThree}{0.5em}
+
+\newcommand{\ld}{\ldots}
+
+\newcommand{\tb}{\textbf}
+\newcommand{\noi}{\noindent}
+\newcommand{\start}{\noi \tb{--} {}}
+\newcommand{\Str}[1]{\tb{Str. #1.}}
+\newcommand{\StrWg}[2]{\tb{Str. #1, wiersz #2.}}
+\newcommand{\StrWd}[2]{\tb{Str. #1, wiersz #2 (od dołu).}}
+\newcommand{\Dow}{\tb{Dowód}}
+\newcommand{\Center}[1]{\begin{center} #1 \end{center}}
+\newcommand{\CenterTB}[1]{\Center{\tb{#1}}}
+\newcommand{\Jest}{\tb{Jest: }}
+\newcommand{\Pow}{\tb{Powinno być: }}
+\newcommand{\Pop}{{\color{red} Popraw.}}
+\newcommand{\Prze}{{\color{red} Przemyśl.}}
+\newcommand{\Dok}{{\color{red} Dokończ.}}
+\newcommand{\Field}[1]{ \begin{center} {\Large \tb{#1} } \end{center} }
+\newcommand{\Work}[1]{ \begin{center} {\large \tb{#1}} \end{center} }
+
+\newcommand{\Main}[1]{ \begin{center} {\LARGE \tb{#1} } \end{center} }
+\newcommand{\attribA}[1]{\nopagebreak{\vspace{2mm}\raggedleft
+    \footnotesize #1\par\vspace{2em}}}
+\newcommand{\attribB}[1]{\nopagebreak{\raggedleft\footnotesize #1
+    \par \vspace{2em}}}
+\verselinenumbersleft
+
+
+\renewcommand{\arraystretch}{1.2}
+
+
+
+\begin{document}
+
+
+% ########################################
+\Main{Kultura ogólna --~błędy i~uwagi.}
+
+\vspace{\spaceTwo}
+% ########################################
+
+
+
+
+
+\Work{
+  Artur Dmochowski \\
+  ,,Kościół <<Wyborczej>>. Największa operacja resortowych dzieci.'',
+  \cite{Dmo14}.}
+
+
+\CenterTB{Błędy}
+\begin{center}
+  \begin{tabular}{|c|c|c|c|c|}
+    \hline
+    & \multicolumn{2}{c|}{} & & \\
+    Strona & \multicolumn{2}{c|}{Wiersz}& Jest & Powinno być \\ \cline{2-3}
+    & Od góry & Od dołu &  &  \\ \hline
+    23 & 11 & & konstytucji(25 & konstytucji (25 \\
+    29 & 12 & & nazwala & nazwała \\
+    29 & 14 & & lat & lat>> \\ \hline
+  \end{tabular}
+\end{center}
+
+\vspace{\spaceOne}
+
+
+
+\newpage
+
+
+
+
+
+% ####################
+\Work{
+  E. Michael Jones \\
+  ,,Zdeprawowani moderniści'', \cite{MJ14}.}
+
+
+\CenterTB{Błędy}
+\begin{center}
+  \begin{tabular}{|c|c|c|c|c|}
+    \hline
+    & \multicolumn{2}{c|}{} & & \\
+    Strona & \multicolumn{2}{c|}{Wiersz}& Jest & Powinno być \\ \cline{2-3}
+    & Od góry & Od dołu &  &  \\ \hline
+    & & & & \\
+    16 & & 19 & Claya & Gaya \\
+    24 & 4 & & człowieczeństwa & człowieczeństwa'' \\
+    25 & 11 & & Samoa & ,,Samoa \\ %''
+    25 & & 14 & wyłączności & Wyłączności \\
+    27 & & 1 & beztroskich>> & beztroskich>>'' \\
+    29 & 12 & & roku & roku. \\
+    30 & & 9 & <<młodej studentki'' & <<młodej studentki>> \\
+    30 & & 8 & bawełniane sukienki>> & <<bawełniane sukienki>> \\
+    37 & 11 & & wówczas'' & wówczas \\
+    37 & & 16 & niego & z~niego \\
+    38 & & 2 & zbagatelizowałaś, & zbagatelizowałaś. \\
+    49 & 12 & & za & z \\
+    56 & 17 & & którym & których \\
+    56 & 3 & & Wilberforce'a** & Wilberforce'a* \\
+    67 & & 13 & \emph{Whay} & \emph{What} \\
+    71 & 14 & & ,, Wartości %''
+           & ,,Wartości \\ %''
+    85 & & 13 & \emph{lalek} & \emph{lalek}'' \\
+    91 & & 4 & a oni & ,,a oni \\ %''
+    99 & 9 & & maja & mają \\
+    101 & & 11 & naukowym & z naukowym \\
+    103 & & 13 & ATA & ATS \\
+    105 & 19 & & mniej silna & silniejsza \\
+    107 & 19 & & Voris & Vorisem \\
+    108 & 2 & & rzeczywistości & o rzeczywistości \\
+    111 & 21 & & Indiana, & Indiana. \\
+    111 & & 20 & w na & na \\
+    119 & & 11 & oszukiwałam''$^{ 2 }$.W & oszukiwałam''$^{ 2 }$. W \\
+    122 & 20 & & od & do \\
+    161 & & 2 & wyraźn0e & wyraźne \\
+    165 & & 3 & ktrego & którego \\
+    171 & 12 & & zajmującysię & zajmujący~się \\
+    186 & & 5 & umożliwiła & uniemożliwiła \\
+    199 & & 15 & wiary & utraty wiary \\
+    200 & & 1 & Mogło & Mogła \\
+    201 & & 14 & roku & roku. \\
+    205 & & 19 & Laetesa & Klaudiusza \\
+    207 & 7 & & taka & taką \\
+    211 & & 18 & ,,Szczyt & Szczyt \\ %''
+    214 & 5 & & [ w~nagrodę] & [w~nagrodę] \\
+    214 & 6 & & najwyraźniej .. & najwyraźniej\ld \\ \hline
+  \end{tabular}
+\end{center}
+
+\begin{center}
+  \begin{tabular}{|c|c|c|c|c|}
+    \hline
+    & \multicolumn{2}{c|}{} & & \\
+    Strona & \multicolumn{2}{c|}{Wiersz}& Jest & Powinno być \\ \cline{2-3}
+    & Od góry & Od dołu &  &  \\ \hline
+    217 & 22 & & Fread & Freuda \\
+    218 & & 2 & od~z & z \\
+    226 & 10 & & Mannung & Manning \\
+    228 & & 17 & pytanie:, & pytanie: \\
+    230 & 12 & & 1963 roku & 1963 roku. \\
+    230 & 13 & & 1425 & 1525 \\
+    237 & & 4 & 560 & 1560 \\ \hline
+  \end{tabular}
+\end{center}
+\noi \\
+\StrWd{17}{10} \\
+\Jest nieczystości pierworodnej córki jest ślepotą ducha. \\
+\Pow pierworodną córką nieczystości jest ślepota ducha. \\
+\StrWg{201}{8} \\
+\Jest otorbił~się w~kokonie psychoanalizy samego siebie\ldots \\
+\Pow otorbił samego siebie w~kokonie psychoanalizy\ldots \\
+\StrWg{209}{20} \\
+\Jest \emph{Gdyby potrafił być perwersyjny, byłby zdrowy, podobnie jak
+  ojciec$^{ 202 }$}. \\
+\Pow ,,Gdyby potrafił być perwersyjny, byłby zdrowy,
+podobnie jak ojciec''$^{ 202 }$. \\
+
+\vspace{\spaceOne}
+
+
+
+
+
+% ####################
+\Work{
+  Red. Piotr Kletowski,
+  ,,Europejskie kino gatunków'', \cite{RedKletowski16}}
+
+
+\CenterTB{Uwagi}
+
+\start \StrWd{129}{1} W~filmie templariuszom nie wyłupiono oczu, lecz stracono i~powieszono na drzewach. Tam dzikie ptaki wyjadły ich oczy.
+
+\CenterTB{Błędy}
+% \begin{center}
+%   \begin{tabular}{|c|c|c|c|c|}
+%     \hline
+%     & \multicolumn{2}{c|}{} & & \\
+%     Strona & \multicolumn{2}{c|}{Wiersz}& Jest & Powinno być \\ \cline{2-3}
+%     & Od góry & Od dołu &  &  \\ \hline
+    % & & & & \\
+    % & & & & \\
+    % & & & & \\
+    % & & & & \\
+    % & & & & \\
+%     \hline
+%   \end{tabular}
+% \end{center}
+\noi
+\StrWg{160}{12} \\
+\Jest \emph{Za kilka dolarów więcej} Monco \\
+\Pow filmu \emph{Dobry, zły i~brzydki} Blondie \\
+
+\vspace{\spaceOne}
+
+
+
+
+
+% ####################
+\Work{
+  Zdzisław Krasnodębski \\
+  ,,Zwycięzca po~przejściach: zebrane eseje i~szkice~V'',
+  \cite{Krasnodebski12} }
+
+
+\CenterTB{Uwagi}
+
+\start \Str{317} Pominięto miejsce i~datę pierwszej publikacji
+artykułu \emph{Nie udawaj Greka, Polsko!}
+
+\vspace{\spaceOne}
+
+
+
+
+
+% ####################
+\Work{
+  Jan Sowa \\
+  ,,Fantomowe ciało króla. Peryferyjne zmagania z~nowoczesną formą'',
+  \cite{Sowa11} }
+
+
+\CenterTB{Uwagi}
+
+\start \StrWg{36}{15} Zdanie ,,jego aktywność ściśle wiąże~się
+związana ze społeczną\ldots'', powinno brzmieć ,,jego aktywność ściśle
+wiąże~się ze społeczną\ldots'' lub ,,jego aktywność jest ściśle
+związana ze społeczną\ldots''. Choć na podstawie tekstu, nie można
+wybrać wersji zamierzonej przez autora, nie~jest to jednak problemem,
+bo obie przekazują tą samą treść.
+
+\start \StrWg{63}{5--9} Zawarty tu tekst, jest źle skonstruowany
+gramatycznie.
+
+\CenterTB{Błędy}
+\begin{center}
+  \begin{tabular}{|c|c|c|c|c|}
+    \hline
+    & \multicolumn{2}{c|}{} & & \\
+    Strona & \multicolumn{2}{c|}{Wiersz}& Jest & Powinno być \\ \cline{2-3}
+    & Od góry & Od dołu &  &  \\ \hline
+    92 & & 6 & 1140 & 1440 \\
+    102 & 11 & & a bo & bo \\
+    118 & 8 & & dawały & nie dawały \\
+    300 & 17 & & mogły & mogło \\
+    362 & 12 & & torrusa & torusa \\
+    367 & 15 & & c\tb{oś} & \tb{coś} \\
+    % & & & & \\
+    % & & & & \\
+    & & & & \\ \hline
+  \end{tabular}
+\end{center}
+
+\vspace{\spaceOne}
+
+
+
+
+
+% \Work{
+% M. Gessen \\
+% ,,Putin. Człowiek bez twarzy.'', \cite{Ges12}.}
+
+
+% \CenterTB{Uwagi.}
+
+% \start \StrWd{9}{6} Zamieszczony tu komentarz odnośnie słowa
+% ,,lustracja'', które ma wedle niego pochodzić z~greki, jest zapewne
+% wynikiem niedbałości tłumacza. W~~oryginale wersji książki użyte tu
+% słowo zapewne jest greckiego pochodzenia, ale polskie słowo
+% ,,lustracja'', pochodzi najpewniej od słowa ,,lustro'', które
+% wydaje~się w~ogóle nie związane z~greką. Prawdopodobnie ten fragment
+% został przetłumaczony mechanicznie, bez~refleksji, że~w~języku
+% polskim
+% ten związek etymologiczny nie zachodzi. \\
+% \start \Str{75--76} W~przedstawionej tu opowieści jest pewna
+% niekonsekwencja. Na 75 stronie pisze, że~Putin był w~tłumie
+% drezdeńczyków nacierających na budynek Stasi, czyli musiał
+% znajdować~się na zewnątrz. Jednak na~następnej stronie pisze,
+% że~wyszedł do owego tłumu na zewnątrz, więc musiał znajdować~się
+% w~środku budynku. Nigdzie nie jest napisane, jak i~dlaczego opuścił
+% tłum i~wszedł do siedziby Stasi. \\
+% \start \Str{93} Należy sprawdzić w jakim wieku byli Gorbaczow i Sacharow w~1989 roku, bo nazwanie Gorbaczowa młodym, jakoś mi nie pasuje. \\
+% \start \Str{101} \tb{Akapit trzeci.} Powinno tu być jawniej napisane, że~wracamy do historii Putina.  \\
+% \start \tb{Tylna okładka, wiersz 5 (od dołu).} Masha Gessen urodziła~się w~1967~r. więc w~latach 1981--1991 miła od 14 do 24 lat, jest więc wysoce nieprawdopodobne, by~w~tym okresie pracowała w~Stanach Zjednoczonych. Zapewne chodziło o~to, że~wówczas tam mieszkała. \\
+
+
+% \CenterTB{Błędy.}
+% \begin{center}
+%   \begin{tabular}{|c|c|c|c|c|}
+%     \hline
+%     & \multicolumn{2}{c|}{} & & \\
+%     Strona & \multicolumn{2}{c|}{Wiersz}& Jest & Powinno być \\ \cline{2-3}
+%     & Od góry & Od dołu &  &  \\ \hline
+%     32 & 2 & & zdawali się nie & nie zdawali się \\
+%     48 & 7 & & przed wyznaczeniem & po wyznaczeniu \\
+%     59 & & 11 & założyciela & twórcy \\
+%     63 & 4 & & karierze$^{ 34 }$ & karierze \\
+%     63 & 6 & & n i c h''. & n i c h''$^{ 34 }$. \\
+%     63 & 9 & & twarze$^{ 35 }$ & twarze \\
+%     63 & 10 & & znaczenie''. & znaczenie''$^{ 35 }$. \\
+%     63 & & 17 & ważnego$^{ 36 }$ & ważnego \\
+%     63 & & 13 & KGB''. & KGB''$^{ 36 }$. \\
+%     64 & 2 & & międzyludzkich<<$^{ 37 }$ & międzyludzkich<< \\
+%     64 & 5 & międzyludzkich'' & międzyludzkich''$^{ 37 }$ \\
+%     65 & 4 & & przyjaciółko$^{ 40 }$ & przyjaciółko \\
+%     78 & 5 & & robić$^{ 68 }$ & \\
+%     78 & 7 & & błędy?'' & błędy?''$^{ 68 }$ \\
+%     & & & & \\
+%     & & & & \\ \hline
+%   \end{tabular}
+% \end{center}
+
+
+
+% \Work{
+% Martin Gilbert \\
+% ,,Pierwsza wojna światowa'', \cite{Gil03}.}
+
+
+% \CenterTB{Uwagi.} \start \StrWg{70}{2} Nie wiem kto popełnił błąd,
+% żołnierz, autor czy
+% tłumacz, ale to zdanie o~martwym doboszu jest bez sensu. \\
+% \start \StrWd{70}{5} To zdanie jest na~pewno źle przetłumaczone,
+% ale~nie~wiem jakie je poprawić.
+
+% Błędy:\\
+% \begin{center}
+%   \begin{tabular}{|c|c|c|c|c|}
+%     \hline
+%     & \multicolumn{2}{c|}{} & & \\
+%     Strona & \multicolumn{2}{c|}{Wiersz}& Jest & Powinno być \\ \cline{2-3}
+%     & Od góry & Od dołu &  &  \\ \hline
+%     & & & & \\
+%     21 & 1 & & 1996 & 1993 \\
+%     68 & & 2 & Wielka Brytania & Rosja \\
+%     69 & 2 & & kulturowo & kulturowo'' \\
+%     69 & 16 & & 1 sierpnia & 12 sierpnia \\
+%     70 & 8 & & Pułk Feuchtingera, kiedy & Kiedy pułk Feuchtingera \\
+%     70 & & 4 & Sir Edward Gray, kiedy & Kiedy sir Edward Gray \\
+%     122 & & 10 & dal & dał \\
+%     177 & 15 & & ,,Walcie, aż lufy pękną''. & <<Walcie, aż lufy pękną>>''. \\
+%     & & & & \\ \hline
+%   \end{tabular}
+% \end{center}
+
+% % \noindent\\
+% % \tb{Jest:} nieczystości pierworodnej córki jest ślepotą ducha. \\
+% % \tb{Powinno być:} pierworodną córką nieczystości jest ślepota
+% % ducha. \\
+
+
+
+
+
+
+% \Work{
+% Paul Johnson\\
+% ,,Narodziny nowoczesności'', \cite{Joh95}.}
+
+
+% \CenterTB{Błędy}
+
+% \begin{center}
+%   \begin{tabular}{|c|c|c|c|c|}
+%     \hline
+%     & \multicolumn{2}{c|}{} & & \\
+%     Strona & \multicolumn{2}{c|}{Wiersz}& Jest & Powinno być \\ \cline{2-3}
+%     & Od góry & Od dołu &  &  \\ \hline
+%     & & & & \\
+%     29 & 2 & & cali, członie & cali, o członie \\
+%     142 & 1 & & Barbaji & Barbajowi \\
+%     142 & & 14 & w nową operą & z nową operą \\
+%     345 & 15 & & XIX & XVIII \\
+%     345 & 18 & & od & na od \\
+%     409 & 8 & & sposób & nie sposób \\ \hline
+%   \end{tabular}
+% \end{center}
+
+
+
+
+
+
+% \Work{
+% J. Kofman, W. Roszkowski \\
+% ,,Transformacja i postkomunizm'', \cite{KR99}.}
+
+
+% \CenterTB{Błędy}
+
+% \begin{center}
+%   \begin{tabular}{|c|c|c|c|c|}
+%     \hline
+%     & \multicolumn{2}{c|}{} & & \\
+%     Strona & \multicolumn{2}{c|}{Wiersz}& Jest & Powinno być \\ \cline{2-3}
+%     & Od góry & Od dołu &  &  \\ \hline
+%     & & & & \\
+%     10 & & 17 & jedynie & jedynej \\
+%     13 & & 4 & o ekspansji & do ekspansji \\
+%     16 & 9 & & marntrawstwem & marnotrawstwem \\
+%     & & & & \\
+%     & & & &  \\ \hline
+%   \end{tabular}
+% \end{center}
+
+
+% \Work{
+% Andrzej Nowak \\
+% ,,Strachy i lachy. Przemiany polskiej pamięci 1982-2012.'',
+% \cite{Now12}.}
+
+
+% \Center{Uwagi:}
+
+% \start \Str{47} T.~S.~Eliot jest na tej stronie nazwany ,,wielkim
+% poetą katolickim'', acz z~tego co wiem do Kościoła nigdy nie
+% przyszedł, zamiast tego dołączył do jakiegoś wyznania
+% anglokatolickiego. Zaś użycie przymiotnika ,,wielki'' w~odniesieniu
+% to tego poety, którego twórczości nie da~się czytać, jest już
+% na~pewno błędem.
+
+
+% % Błędy:\\
+% % \begin{center}
+% %   \begin{tabular}{|c|c|c|c|c|}
+% %     \hline
+% %     & \multicolumn{2}{c|}{} & & \\
+% %     Strona & \multicolumn{2}{c|}{Wiersz}& Jest &
+% %     Powinno
+% %     być
+% %     \\
+% %     \cline{2-3}
+% %     & Od góry & Od dołu & & \\ \hline
+% %     & & & & \\
+% %     & & & & \\ \hline
+% %   \end{tabular}
+% % \end{center}
+
+
+
+% \Work{
+% Andrzej Nowak \\
+% ,,Intelektualna historia III RP. Rozmowy z lat 1990--2012.'',
+% \cite{Now13}.}
+
+
+% Błędy:\\
+% \begin{center}
+%   \begin{tabular}{|c|c|c|c|c|}
+%     \hline
+%     & \multicolumn{2}{c|}{} & & \\
+%     Strona & \multicolumn{2}{c|}{Wiersz}& Jest & Powinno być \\ \cline{2-3}
+%     & Od góry & Od dołu &  &  \\ \hline
+%     & & & & \\
+%     & & & & \\ \hline
+%   \end{tabular}
+% \end{center}
+% \noi \\
+% \tb{Przednia okładka, wiersz 14.}\\
+% \Jest \emph{ImperologicalStudies.APolishPerspective}(2011);\emph{Czaswalki} \\
+% \Pow \emph{Imperological Studies. A Polish Perspective} (2011);\emph{Czas walki} \\
+% \tb{Przednia okładka, wiersz 10 (od dołu).}\\
+% \Jest ...w Brnie \\
+% \Pow w Brnie. \\
+
+
+
+% \Work{
+% Andrzej Nowak \\
+% ,,Dzieje Polski. Tom I do 1202: Skąd nasz ród.'', \cite{Now14a}.}
+
+
+% \CenterTB{Uwagi}
+
+% \start \tb{Strona tytułowa.} W informacjach o~autorze jest podane,
+% że~był redaktorem naczelnym ,,ARCANA'' w~latach 1994--2012, lecz
+% prawidłowy okres to 1995--2012. \\
+% \start \StrWg{85}{16} ,,Nie było innej drogi do~Europy w~końcu X~w. jak poprzez chrzest, nie~było dalej w~Europie innej drogi do humanizmu jak poprzez chrześcijaństwo.'' To zdanie oddaje chyba najlepiej problem z~postrzeganiem chrześcijaństwa nie tylko przez Nowaka, ale i przez przytłaczającą większość, jeśli nie~całość, polskiej myśli patriotycznej. Chrześcijaństwo, nawet nie rzymski-katolicyzm, jest tylko środkiem do osiągnięcia doczesnych, świeckich, ziemskich celów, takich jak dostanie~się do~,,Europy'', albo kultywowanie humanizmu, nie~zaś wiarą pochodzącą od Boga i~jedyną drogą do życia wiecznego. Jest to błąd naturalistyczny w~najgorszym wydaniu. \\
+% \start \Str{96} W~swoim wykładzie z~cyklu
+% \href{https://www.youtube.com/watch?v=QovVLT2fitc}{,,Filary
+% Polskości: Mieszko i~Bolesław''} Nowak znacznie wyraźniej niż w~tej
+% książce, pokazał cały cynizm polityczny Mieszka~I. O~możliwości
+% takiego spojrzenia na tego władcę Nowak mówi tam otwarcie
+% jednocześnie, zarówno na wykładzie jaki i~książce, próbuje przykryć
+% ten cynizm, nazywając działania Mieszka ,,majstersztykiem polityki
+% polskiej''.
+
+% Błędy:\\
+% \begin{center}
+%   \begin{tabular}{|c|c|c|c|c|}
+%     \hline
+%     & \multicolumn{2}{c|}{} & & \\
+%     Strona & \multicolumn{2}{c|}{Wiersz}& Jest & Powinno być \\ \cline{2-3}
+%     & Od góry & Od dołu &  &  \\ \hline
+%     & & & & \\
+%     41 & 3 & & W X w. jeszcze & Jeszcze w X w. \\
+%     53 & & 1 & Księga Wyjścia & Księga Rodzaju \\
+%     61 & 10 & & do dziejów & dla dziejów \\
+%     %     & & & & \\
+%     %     & & & & \\
+%     %     & & & & \\
+%     & & & & \\ \hline
+%   \end{tabular}
+% \end{center}
+% \StrWg{61}{8} \\
+% \Jest z~Rocznika kapituły krakowskiej dawnego \ldots \\
+% \Pow z~dawnego Rocznika kapituły krakowskiej \ldots \\
+
+
+
+% \Work{
+% Red. A. Nowak \\
+% ,,Historie Polski w~XIX wieku. Tom I: Kominy, ludzie i~obłoki:
+% modernizacja i~kultura.'', \cite{HPXIX1}.}
+
+% % Uwagi:
+% % \begin{itemize}
+% % \item[--] \Str{45} T.~S.~ Eliot jest na tej stronie nazwany
+% %   ,,wielkim poetą katolickim'', acz z~tego co wiem do Kościoła
+% %   nigdy
+% %   nie przyszedł, zamiast tego dołączył do jakiegoś wyznania
+% %   anglokatolickiego. Zaś przymiotnik ,,wielki'' w~odniesieniu to
+% %   tego poety, którego twórczości nie da~się czytać, jest już
+% %   na~pewno błędny.
+% % \end{itemize}
+
+% \CenterTB{Błędy}
+
+% \begin{center}
+%   \begin{tabular}{|c|c|c|c|c|}
+%     \hline
+%     & \multicolumn{2}{c|}{} & & \\
+%     Strona & \multicolumn{2}{c|}{Wiersz}& Jest & Powinno być \\ \cline{2-3}
+%     & Od góry & Od dołu &  &  \\ \hline
+%     & & & & \\
+%     16 & & 15 & równości równość & równości \\ \hline
+%   \end{tabular}
+% \end{center}
+
+
+
+% \Work{
+% R. Rhodes \\
+% ,,Jak powstała bomba atomowa'', \cite{Rho00}.}
+
+
+% Błędy:\\
+% \begin{center}
+%   \begin{tabular}{|c|c|c|c|c|}
+%     \hline
+%     & \multicolumn{2}{c|}{} & & \\
+%     Strona & \multicolumn{2}{c|}{Wiersz}& Jest & Powinno być \\ \cline{2-3}
+%     & Od góry & Od dołu &  &  \\ \hline
+%     & & & & \\
+%     719 & & 6 & 1993 & 1933 \\
+%     & & & & \\ \hline
+%   \end{tabular}
+% \end{center}
+
+% \Work{
+% W. Roszkowski \\
+% ,,Najnowsza historia Polski: 1914--1939'', \cite{Ros11a}.}
+
+
+% \CenterTB{Uwagi:} \start Karygodną i to~niezależnie od uznawanej
+% metodologi pisania prac historycznych, cechą całego tego wydania
+% ,,Najnowszej historii Polski'', jest nieumieszczenie w~każdej tomie
+% listy używanych skrótów,
+% niezależnie od tego, czy zostały one wprowadzone w~tym, czy~w~którymś z~poprzednich. \\
+% \start Ciekawym wydaje~się zauważanie, że~w~tej książce Roszkowski
+% zrealizował chyba idealnie, jedno z~założeń zaprojektowanego przez
+% piłsudczyków programu edukacji, przyjętego po reformie
+% jędrzejewiczowskiej (1932): sprowadzenia lat 1918--1920 wyłączenie
+% do~tematu walki o~granice. Więcej na ten temat \\ w~Andrzej Chojnowski ,,Kwestia patriotyzmu w~poszukiwaniach programowych obozu piłsudczykowskiego'', str. 136 \cite{PP06}. \\
+% \start \Str{26} Podany tu opis przyczyn wybuchu I~Wojny Światowej,
+% zwłaszcza bardzo silne stwierdzenie, że~Austro\dywiz Węgry
+% wypowiedziały wojnę Serbii pod naciskiem Niemiec, warto
+% skonfrontować z~tym co pisze M. Gilbert w~swojej książce na temat
+% tego przedziwnego wydarzenia \cite{Gil03}. \\
+% \start \StrWd{78}{4} Cudzysłów otwarty w~tym wierszu nigdy nie został zamknięty, przez co~nie wiadomo, gdzie~się kończy cytat. \\
+
+% Błędy:\\
+% \begin{center}
+%   \begin{tabular}{|c|c|c|c|c|}
+%     \hline
+%     & \multicolumn{2}{c|}{} & & \\
+%     Strona & \multicolumn{2}{c|}{Wiersz}& Jest & Powinno być \\ \cline{2-3}
+%     & Od góry & Od dołu &  &  \\ \hline
+%     & & & & \\
+%     20 & & 9 & sita & siła \\
+%     27 & & 16 & z agrozić & zagrozić \\
+%     31 & & 8 & Hans Beseler & Hans von Beseler \\
+%     36 & 3 & & POW & POW. \\
+%     37 & 12 & & LLOYDA & LOYDA \\
+%     47 & & 6 & przed nadchodzącą zimą & nadchodzącej zimy \\
+%     50 & 21 & & \emph{Pobki} & \emph{Polski} \\
+%     73 & & 13 & 1920 R & 1920 R. \\
+%     & & 17 & W braku & Z braku \\
+%     & & & & \\ \hline
+%   \end{tabular}
+% \end{center}
+
+% \Work{
+% W. Roszkowski \\
+% ,,Najnowsza historia Polski: 1980--1989'', \cite{Ros11f}.}
+
+
+% \CenterTB{Uwagi:} \start \Str{8} Jest to jeden z~największych
+% przykładów straszliwie suchej, pozbawiającej wydarzenia
+% z~przeszłości realności, a~także nie pozwalającej~się zorientować
+% w~symbolach o~ogromnej wadze, historiografii pozytywistycznej, chyba
+% szkoły niemieckiej, jaką reprezentuje Roszkowski. Jeśli dobrze
+% wywnioskowałem z~tego wykładu
+% \href{https://www.youtube.com/watch?v=6B93_3CCMac}{Sławomira
+% Cenckiewicza}, to słynny skok Wałęsy przez płot, wedle niego był to
+% w~istocie mur, miał miejsce w~opisywanym tu dniu 22~sierpnia 1980~r.
+% Wałęsa musiał przeskoczyć ten mur, właśnie dlatego, że~spóźnił~się
+% na główne otwarcie stoczni. Tylko pomarzyć
+% jak~by to opisał Paul Johnson. \\
+% \start \Str{16} Choć nie~czytałem poprzednich tomów, i~być może jest
+% tam informacja o~tym kim jest Karol Modzelewski, to w~tym tomie jest
+% wymieniony tylko dwa razy, i~z tego powodu powinna być podana jakaś
+% informacja o~nim, by~czytelnik wiedział kto jest autorem tak
+% wiele znaczącej nazwy jak ,,Solidarność''. \\
+% \start \StrWd{23}{6} Cudzysłów otwarty w~tym wierszu nigdy nie
+% został
+% zamknięty, przez co~nie wiadomo, gdzie~się kończy cytat. \\
+% \start \StrWd{26}{6} Nie jest podane co było tematem omawianej
+% tu~narady sztabowej.
+
+
+% % Błędy:\\
+% % \begin{center}
+% %   \begin{tabular}{|c|c|c|c|c|}
+% %     \hline
+% %     & \multicolumn{2}{c|}{} & & \\
+% %     Strona & \multicolumn{2}{c|}{Wiersz}& Jest &
+% %     Powinno
+% %     być
+% %     \\
+% %     \cline{2-3}
+% %     & Od góry & Od dołu & & \\ \hline
+% %     & & & & \\
+% %     20 & & 9 & sita & siła \\
+% %     27 & & 16 & z agrozić & zagrozić \\
+% %     31 & & 8 & Hans Beseler & Hans von Beseler \\
+% %     36 & 3 & & POW & POW. \\
+% %     37 & 12 & & LLOYDA & LOYDA \\
+% %     47 & & 6 & przed nadchodzącą zimą & nadchodzącej
+% %     zimy
+% %     \\
+% %     50 & 21 & & \emph{Pobki} & \emph{Polski} \\
+% %     73 & & 13 & 1920 R & 1920 R. \\
+% %     & & 17 & W braku & Z braku \\
+% %     & & & & \\ \hline
+% %   \end{tabular}
+% % \end{center}
+
+% \Work{
+% A. K. Wróblewski \\
+% ,,Historia fizyki'', \cite{Wro06}.}
+
+
+% Błędy:\\
+% \begin{center}
+%   \begin{tabular}{|c|c|c|c|c|}
+%     \hline
+%     %     & \multicolumn{2}{c|}{} & & \\
+%       & \multicolumn{2}{c|}{Wiersz} & & \\ \cline{2-3}
+%       %       Strona & Od góry & Od dołu & Jest & Powinno być \\
+%       & (kolumna) & (kolumna) & & \\ \hline
+%       & & & & \\
+%       %       203 & 3 (2) & & Jacob 'sGravesande'a & Jacob's
+%       %       Gravesande'a \\
+%       & & & & \\ \hline
+%   \end{tabular}
+% \end{center}
+
+
+\bibliographystyle{alpha} \bibliography{Bibliography}{}
+
+
+
+\end{document}
