@@ -1,18 +1,32 @@
 % Autor: Kamil Ziemian
 
 % --------------------------------------------------------------------
-% Paczki
+% Podstawowe ustawienia i pakiety
 % --------------------------------------------------------------------
-\RequirePackage[l2tabu, orthodox]{nag}  % Wykrywa przestarzałe i niedobre
-% rozwiązania LaTeXa. Więcej jest w l2tabu-english
-\documentclass[a4paper,11pt]{article}  % {rozmiar fontu}[klasa dokumentu]
-\usepackage[utf8]{inputenc}  % Włączenie kodowania UTF-8, daje polskie znaki
-\usepackage[polish]{babel}  % Nie pamiętam
-\usepackage[MeX]{polski}  % Nie pamiętam
-\usepackage{indentfirst}  % Wcięcie w pierwszym akapicie
-\usepackage{microtype}  % Twierdzi, że poprawi rozmiar odstępów w tekście
-\usepackage{vmargin}  % Pozwala na prostą kontrolę rozmiaru marginesów,
-% za pomocą komend poniżej
+\RequirePackage[l2tabu, orthodox]{nag} % Wykrywa przestarzałe i niewłaściwe
+% sposoby używania LaTeXa. Więcej jest w l2tabu English version.
+\documentclass[a4paper,11pt]{article}
+% {rozmiar papieru, rozmiar fontu}[klasa dokumentu]
+\usepackage[MeX]{polski} % Polonizacja LaTeXa, bez niej będzie pracował
+% w języku angielskim.
+\usepackage[utf8]{inputenc} % Włączenie kodowania UTF-8, co daje dostęp
+% do polskich znaków.
+\usepackage{lmodern} % Wprowadza fonty Latin Modern.
+\usepackage[T1]{fontenc} % Potrzebne do używania fontów Latin Modern.
+
+
+
+% ----------------------------
+% Podstawowe pakiety (niezwiązane z ustawieniami języka)
+% ----------------------------
+\usepackage{microtype} % Twierdzi, że poprawi rozmiar odstępów w tekście.
+\usepackage{graphicx} % Wprowadza bardzo potrzebne komendy do wstawiania
+% grafiki.
+\usepackage{verbatim} % Poprawia otoczenie VERBATIME.
+\usepackage{textcomp} % Dodaje takie symbole jak stopnie Celsiusa,
+% wprowadzane bezpośrednio w tekście.
+\usepackage{vmargin} % Pozwala na prostą kontrolę rozmiaru marginesów,
+% za pomocą komend poniżej. Rozmiar odstępów jest mierzony w calach.
 % ----------------------------
 % MARGINS
 % ----------------------------
@@ -25,15 +39,35 @@
 {0.25in} % head sep
 {   9pt} % foot height
 { 0.3in} % foot sep
-\usepackage{graphicx}  % Pozwala wstawiać do tekstu grafikę
-\usepackage{xcolor}  % Pozwala używać kolorowych czcionek (zapewne dużo
-% więcej, ale ja więcej nie potrafię zrobić)
-\usepackage{hyperref}  % Pozwala tworzyć hiperlinki i zamienia odwołania
-% do bibliografii na hiperlinki.
 
-% ##################
-\renewcommand{\arraystretch}{1.2}  % Ustawienie szerokości odstępów między
-% wierszami w tabelach
+
+
+% ------------------------------
+% Często używane pakiety
+% ------------------------------
+\usepackage{csquotes} % Pozwala w prosty sposób wstawiać cytaty do tekstu.
+\usepackage{xcolor} % Pozwala używać kolorowych czcionek (zapewne dużo
+% więcej, ale ja nie potrafię nic o tym powiedzieć).
+
+
+
+
+
+% --------------------------------------------------------------------
+% Dodatkowe ustawienia dla języka polskiego
+% --------------------------------------------------------------------
+\renewcommand{\thesection}{\arabic{section}.}
+% Kropki po numerach rozdziału (polski zwyczaj topograficzny)
+\renewcommand{\thesubsection}{\thesection\arabic{subsection}}
+% Brak kropki po numerach podrozdziału
+
+
+
+% ----------------------------
+% Ustawienia różnych parametrów tekstu
+% ----------------------------
+\renewcommand{\arraystretch}{1.2} % Ustawienie szerokości odstępów między
+% wierszami w tabelach.
 
 
 
@@ -53,10 +87,10 @@
 % ##########
 % Skróty do często używanych komend
 \newcommand{\ld}{\ldots}
-\newcommand{\tbs}{\textbackslash}  % Backslash w tekście
+\newcommand{\tbs}{\textbackslash} % Backslash w tekście
 
 % ##########
-% Edycja tekstu (może jest na to lepsze nazwa?)
+% Podstawowa komendy do edycja tekstu
 \newcommand{\tb}{\textbf}
 \newcommand{\noi}{\noindent}
 \newcommand{\start}{\noi \tb{--} {}}
@@ -67,7 +101,7 @@
 \newcommand{\StrWd}[2]{\tb{Str. #1, wiersz #2 (od dołu).}}
 
 % Do poprawiania błędów
-\newcommand{\Dow}{\tb{Dowód}}  % To niezbyt pasuje do opisu POPRAW
+\newcommand{\Dow}{\tb{Dowód}} % To niezbyt pasuje do opisu POPRAW
 \newcommand{\Jest}{\tb{Jest: }}
 \newcommand{\Pow}{\tb{Powinno być: }}
 
@@ -79,24 +113,41 @@
 \newcommand{\Field}[1]{ \begin{center} {\Large \tb{#1} } \end{center} }
 \newcommand{\Work}[1]{ \begin{center} {\large \tb{#1}} \end{center} }
 
+% Koniec komend
+% ############################
+
+
+
+
+
+% ----------------------------
+% Pakiet "hyperref"
+% Polecano by umieszczać go na końcu preambuły.
+% ----------------------------
+\usepackage{hyperref} % Pozwala tworzyć hiperlinki i zamienia odwołania
+% do bibliografii na hiperlinki.
+
+
 
 
 
 
 % ####################################################################
+% Początek dokumentu
 \begin{document}
 % ####################################################################
 
 
 
 % ##############################
-\Main{Historia Polski}
+\Main{Historia Polski} % Tytuł całego tekstu
 
 \vspace{\spaceTwo} \vspace{\spaceThree}
 % ##############################
 
 
 % ####################
+% Tytuł i autor dzieła
 \Work{
   Norman Davies \\
   ,,Serce Europy'', \cite{DaviesSerceEuropy14} }
@@ -271,12 +322,12 @@ syna'', co czyni całe zdanie zrozumiałym i~sensownym.
     & \multicolumn{2}{c|}{} & & \\
     Strona & \multicolumn{2}{c|}{Wiersz}& Jest & Powinno być \\ \cline{2-3}
     & Od góry & Od dołu &  &  \\ \hline
-    41  & 3 & & W X w. jeszcze & Jeszcze w X w. \\
-    53  & & 1 & Księga Wyjścia & Księga Rodzaju \\
+    41  &  3 & & W X w. jeszcze & Jeszcze w X w. \\
+    53  & &  1 & Księga Wyjścia & Księga Rodzaju \\
     61  & 10 & & do dziejów & dla dziejów \\
     100 & 14 & & Kto & Kto to \\
     169 & 17 & & mnie & do mnie \\
-    202 & & 1 & posiąść & przesiąść \\
+    202 & &  1 & posiąść & przesiąść \\
     236 & 14 & & ,,Gall''). & ,,Gall''. \\
     % & & & & \\
     % & & & & \\
@@ -876,7 +927,11 @@ Katolickich Uniwersytetu Leuven \\
 
 % ####################################################################
 % ####################################################################
+% Bibliografia
 \bibliographystyle{alpha} \bibliography{Bibliography}{}
 
 
+
+% ############################
+% Koniec dokumentu
 \end{document}

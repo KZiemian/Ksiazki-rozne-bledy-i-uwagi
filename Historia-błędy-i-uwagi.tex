@@ -1,18 +1,32 @@
 % Autor: Kamil Ziemian
 
 % --------------------------------------------------------------------
-% Paczki
+% Podstawowe ustawienia i pakiety
 % --------------------------------------------------------------------
-\RequirePackage[l2tabu, orthodox]{nag}  % Wykrywa przestarzałe i niedobre
-% rozwiązania LaTeXa. Więcej jest w l2tabu-english
-\documentclass[a4paper,11pt]{article}  % {rozmiar fontu}[klasa dokumentu]
-\usepackage[utf8]{inputenc}  % Włączenie kodowania UTF-8, daje polskie znaki
-\usepackage[polish]{babel}  % Nie pamiętam
-\usepackage[MeX]{polski}  % Nie pamiętam
-\usepackage{indentfirst}  % Wcięcie w pierwszym akapicie
-\usepackage{microtype}  % Twierdzi, że poprawi rozmiar odstępów w tekście
-\usepackage{vmargin}  % Pozwala na prostą kontrolę rozmiaru marginesów,
-% za pomocą komend poniżej
+\RequirePackage[l2tabu, orthodox]{nag} % Wykrywa przestarzałe i niewłaściwe
+% sposoby używania LaTeXa. Więcej jest w l2tabu English version.
+\documentclass[a4paper,11pt]{article}
+% {rozmiar papieru, rozmiar fontu}[klasa dokumentu]
+\usepackage[MeX]{polski} % Polonizacja LaTeXa, bez niej będzie pracował
+% w języku angielskim.
+\usepackage[utf8]{inputenc} % Włączenie kodowania UTF-8, co daje dostęp
+% do polskich znaków.
+\usepackage{lmodern} % Wprowadza fonty Latin Modern.
+\usepackage[T1]{fontenc} % Potrzebne do używania fontów Latin Modern.
+
+
+
+% ----------------------------
+% Podstawowe pakiety (niezwiązane z ustawieniami języka)
+% ----------------------------
+\usepackage{microtype} % Twierdzi, że poprawi rozmiar odstępów w tekście.
+\usepackage{graphicx} % Wprowadza bardzo potrzebne komendy do wstawiania
+% grafiki.
+\usepackage{verbatim} % Poprawia otoczenie VERBATIME.
+\usepackage{textcomp} % Dodaje takie symbole jak stopnie Celsiusa,
+% wprowadzane bezpośrednio w tekście.
+\usepackage{vmargin} % Pozwala na prostą kontrolę rozmiaru marginesów,
+% za pomocą komend poniżej. Rozmiar odstępów jest mierzony w calach.
 % ----------------------------
 % MARGINS
 % ----------------------------
@@ -25,15 +39,35 @@
 {0.25in} % head sep
 {   9pt} % foot height
 { 0.3in} % foot sep
-\usepackage{graphicx}  % Pozwala wstawiać do tekstu grafikę
-\usepackage{xcolor}  % Pozwala używać kolorowych czcionek (zapewne dużo
-% więcej, ale ja więcej nie potrafię zrobić)
-\usepackage{hyperref}  % Pozwala tworzyć hiperlinki i zamienia odwołania
-% do bibliografii na hiperlinki.
 
-% ##################
-\renewcommand{\arraystretch}{1.2}  % Ustawienie szerokości odstępów między
-% wierszami w tabelach
+
+
+% ------------------------------
+% Często używane pakiety
+% ------------------------------
+\usepackage{csquotes} % Pozwala w prosty sposób wstawiać cytaty do tekstu.
+\usepackage{xcolor} % Pozwala używać kolorowych czcionek (zapewne dużo
+% więcej, ale ja nie potrafię nic o tym powiedzieć).
+
+
+
+
+
+% --------------------------------------------------------------------
+% Dodatkowe ustawienia dla języka polskiego
+% --------------------------------------------------------------------
+\renewcommand{\thesection}{\arabic{section}.}
+% Kropki po numerach rozdziału (polski zwyczaj topograficzny)
+\renewcommand{\thesubsection}{\thesection\arabic{subsection}}
+% Brak kropki po numerach podrozdziału
+
+
+
+% ----------------------------
+% Ustawienia różnych parametrów tekstu
+% ----------------------------
+\renewcommand{\arraystretch}{1.2} % Ustawienie szerokości odstępów między
+% wierszami w tabelach.
 
 
 
@@ -53,10 +87,10 @@
 % ##########
 % Skróty do często używanych komend
 \newcommand{\ld}{\ldots}
-\newcommand{\tbs}{\textbackslash}  % Backslash w tekście
+\newcommand{\tbs}{\textbackslash} % Backslash w tekście
 
 % ##########
-% Edycja tekstu (może jest na to lepsze nazwa?)
+% Podstawowa komendy do edycja tekstu
 \newcommand{\tb}{\textbf}
 \newcommand{\noi}{\noindent}
 \newcommand{\start}{\noi \tb{--} {}}
@@ -67,12 +101,9 @@
 \newcommand{\StrWd}[2]{\tb{Str. #1, wiersz #2 (od dołu).}}
 
 % Do poprawiania błędów
-\newcommand{\Dow}{\tb{Dowód}}  % To niezbyt pasuje do opisu POPRAW
+\newcommand{\Dow}{\tb{Dowód}} % To niezbyt pasuje do opisu POPRAW
 \newcommand{\Jest}{\tb{Jest: }}
 \newcommand{\Pow}{\tb{Powinno być: }}
-
-% Wyróżnienia w tekście
-\newcommand{\red}[1]{{\color{red} #1}}
 
 % Nagłówki
 \newcommand{\Center}[1]{\begin{center} #1 \end{center}}
@@ -82,18 +113,33 @@
 \newcommand{\Field}[1]{ \begin{center} {\Large \tb{#1} } \end{center} }
 \newcommand{\Work}[1]{ \begin{center} {\large \tb{#1}} \end{center} }
 
+% Koniec komend
+% ############################
+
+
+
+
+
+% ----------------------------
+% Pakiet "hyperref"
+% Polecano by umieszczać go na końcu preambuły.
+% ----------------------------
+\usepackage{hyperref} % Pozwala tworzyć hiperlinki i zamienia odwołania
+% do bibliografii na hiperlinki.
+
 
 
 
 
 % ####################################################################
+% Początek dokumentu
 \begin{document}
 % ####################################################################
 
 
 
 % ########################################
-\Main{Historia, błędy i~uwagi}
+\Main{Historia, błędy i~uwagi} % Tytuł całego tekstu
 
 \vspace{\spaceTwo} \vspace{\spaceThree}
 % ########################################
@@ -101,7 +147,7 @@
 
 
 % ##############################
-\Field{Historia świętej wiary}
+\Field{Historia świętej wiary} % Nazwa dziedziny
 
 \vspace{\spaceTwo} % \vspace{\spaceThree}
 % ##############################
@@ -109,10 +155,12 @@
 
 
 % ####################
+% Autor i tytuł książki
 \Work{
   Richard Butterwick \\
   ,,Polska Rewolucja a~Kościół Katolicki 1788--1792'',
   \cite{ButterwickPolskaRewolucjaAKosciolKatolicki12} }
+
 
 
 \CenterTB{Uwagi}
@@ -143,6 +191,7 @@
 
 % ####################
 \newpage
+% Autor i tytuł książki
 \Work{
   Warren H.~Carroll \\
   ,,Historia Chrześcijaństwa. Tom~I: Narodziny Chrześcijaństwa'',
@@ -193,6 +242,7 @@
 
 
 % ####################
+% Autor i tytuł dzieła
 \Work{
   Warren H.~Carroll \\
   ,,Historia Chrześcijaństwa. Tom~II: Budowanie Chrześcijaństwa'',
@@ -309,6 +359,7 @@ prawami.
 
 
 % ####################
+% Autor i tytuł dzieła
 \Work{
   Warren H.~Carroll \\
   ,,Historia Chrześcijaństwa. Tom~IV: Podział Chrześcijaństwa'',
@@ -376,6 +427,7 @@ prawami.
 
 
 % ####################
+% Autor i tytuł dzieła
 \Work{
   Warren H.~Carroll, Anne W. Carroll \\
   ,,Historia Chrześcijaństwa. Tom~VI: Kryzys Chrześcijaństwa'',
@@ -900,6 +952,7 @@ Capitalism and~Western Success \\
 
 
 % ####################
+% Autor i tytuł książki
 \Work{
   Red. E. Guerriero, M. Impagliazzo \\
   ,,Najnowsza historia Kościoła. Katolicy i~kościoły chrześcijańskie
@@ -934,6 +987,7 @@ Capitalism and~Western Success \\
 
 
 % ####################
+% Autor i tytuł dzieła
 \Work{
   Ks. Bogusław Kumor \\
   ,,Historia Kościoła. Tom~I: Starożytność chrześcijańska'',
@@ -981,7 +1035,7 @@ Capitalism and~Western Success \\
 
 % ########################################
 \newpage
-\Field{Dzieje lat 1789--1914}
+\Field{Dzieje lat 1789--1914} % Nazwa dziedziny
 
 \vspace{\spaceTwo} \vspace{\spaceThree}
 % ########################################
@@ -2502,8 +2556,11 @@ wspólnego z~komputerem.
 
 % ####################################################################
 % ####################################################################
+% Bibliografia
 \bibliographystyle{alpha} \bibliography{Bibliography}{}
 
 
 
+% ############################
+% Koniec dokumentu
 \end{document}
