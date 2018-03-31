@@ -51,6 +51,25 @@
 
 
 
+% ------------------------------
+% Pakiety do tekstów z nauk przyrodniczych
+% ------------------------------
+\let\lll\undefined % Amsmath gryzie się z językiem pakietami do języka
+% polskiego, bo oba definiują komendę \lll. Aby rozwiązać ten problem
+% oddefiniowuję tę komendę, ale może tym samym pozbywam się dużego Ł.
+\usepackage[intlimits]{amsmath} % Podstawowe wsparcie od American
+% Mathematical Society (w skrócie AMS)
+\usepackage{amsfonts, amssymb, amscd, amsthm} % Dalsze wsparcie od AMS
+% \usepackage{siunitx} % Dla prostszego pisania jednostek fizycznych
+\usepackage{upgreek} % Ładniejsze greckie litery
+% Przykładowa składnia: pi = \uppi
+\usepackage{slashed} % Pozwala w prosty sposób pisać slash Feynmana.
+\usepackage{calrsfs} % Zmienia czcionkę kaligraficzną w \mathcal
+% na ładniejszą. Może w innych miejscach robi to samo, ale o tym nic
+% nie wiem.
+
+
+
 
 
 % --------------------------------------------------------------------
@@ -68,6 +87,7 @@
 % Mają być w tym samym katalogu to ten plik .tex
 % ----------------------------
 \usepackage{latexshortcuts}
+\usepackage{mathshortcuts}
 
 
 
@@ -106,7 +126,138 @@
 
 
 
+% ####################
+\Work{ % Autor i tytuł dzieła
+  Jacques Maritain \\
+  ,,Trzej reformatorzy. Luter, Kartezjusz, Rousseau'',
+   \cite{MaritainTrzejReformatorzy05} }
+
+
+\CenterTB{Błędy}
+\begin{center}
+  \begin{tabular}{|c|c|c|c|c|}
+    \hline
+    & \multicolumn{2}{c|}{} & & \\
+    Strona & \multicolumn{2}{c|}{Wiersz}& Jest & Powinno być \\ \cline{2-3}
+    & Od góry & Od dołu &  &  \\ \hline
+    18 & 13 & & JózefTischner & Józef Tischner \\
+    20 & & 9 & dobra & dobra'' \\
+    29 & & 4 & deorsum'' & deorsum \\
+    39 & 8 & & stanie & stanu \\
+    % & & & & \\
+    % & & & & \\
+    % & & & & \\
+    % & & & & \\
+    % & & & & \\
+    \hline
+  \end{tabular}
+\end{center}
+\noi
+\StrWg{224}{2} \\
+\Jest sprawiedliwości.''., Paryż, Plon, II, 71). \\
+\Pow sprawiedliwości.'', (Paryż, Plon, II, 71). \\
+
+\vspace{\spaceTwo}
+
+
+
+
+
+\Work{
+  Jacques Maritain \\
+  ,,Trzej reformatorzy'' }
+
+
+% Uwagi:\\
+% \begin{itemize}
+%   
+% \item
+%
+% \item
+%
+% \end{itemize}
+
+\CenterTB{Błędy}
+\begin{center}
+  \begin{tabular}{|c|c|c|c|c|}
+    \hline
+    & \multicolumn{2}{c|}{} & & \\
+    Strona & \multicolumn{2}{c|}{Wiersz}& Jest & Powinno być \\ \cline{2-3}
+    & Od góry & Od dołu &  &  \\ \hline
+    & & & & \\
+    135 & 5 & & J ona & Jest ona \\
+    143 & 6 & & Dostojewski Andre & Dostojewski, Andre \\
+    % ,,
+    150 & & 1 & Heloizy'' ,,Stąd %''
+    % ,,
+           & Heloizy''. ,,Stąd \\ %''
+    173 & & 8 & kija obręczy & kija, obręczy \\
+    & & & & \\ \hline
+  \end{tabular}
+\end{center}
+
+Powinno być:
+\begin{itemize}
+\item[--] Str. 224. \ldots o które oskarża się z pokorą.
+\end{itemize}
+
+
+
+
+
+% ########################################
+\newpage
+\Field{Filozofia nauki i~filozofujący naukowcy}
+
+\vspace{\spaceThree}
+% ########################################
+
+
+% ####################
+\Work{ % Autor i tytuł dzieła
+  Roger Penrose \\
+  ,,Moda, wiara i~fantazja w~nowej fizyce Wszechświata'', \cite{PenroseModaWiaraIFantazja17} }
+
+\CenterTB{Uwagi}
+
+\start \Str{661} 
+
+\CenterTB{Błędy}
+\begin{center}
+  \begin{tabular}{|c|c|c|c|c|}
+    \hline
+    & \multicolumn{2}{c|}{} & & \\
+    Strona & \multicolumn{2}{c|}{Wiersz}& Jest & Powinno być \\ \cline{2-3}
+    & Od góry & Od dołu &  &  \\ \hline
+    688 & &  8 & $i \neq j$ & $i \neq j$, \\
+    688 & &  3 & $\ldots,$ & $\ldots$ \\
+    689 & &  4 & $( \bsym{\rho}_{ 1 },\; \ld, \bsym{\rho}_{ n } )$
+           & $( \bsym{\rho}_{ 1 }, \ld, \bsym{\rho}_{ n } )$ \\
+    % & & & & \\
+    % & & & & \\
+    % & & & & \\
+    \hline
+  \end{tabular}
+\end{center}
+\noi
+\StrWg{668}{7} \\
+\Jest
+\begin{equation*}
+  X_{ i } = x_{ i } + A_{ i } ( i = 1, 2, \ld, n ).
+\end{equation*}
+\Pow
+\begin{equation*}
+  X_{ i } = x_{ i } + A_{ i }, \quad i = 1, 2, \ld, n.
+\end{equation*}
+
+\vspace{\spaceTwo}
+
+
+
+
+
 % ##############################
+\newpage
 \Field{Historia filozofii}
 
 \vspace{\spaceFour}
@@ -215,88 +366,17 @@ ktoś robił to dosłownie. \\
 
 
 
-% ####################
-\Work{
-  Jacques Maritain \\
-  ,,Trzej reformatorzy. Luter, Kartezjusz, Rousseau'',
-   \cite{MaritainTrzejReformatorzy05} }
-
-
-\CenterTB{Błędy}
-\begin{center}
-  \begin{tabular}{|c|c|c|c|c|}
-    \hline
-    & \multicolumn{2}{c|}{} & & \\
-    Strona & \multicolumn{2}{c|}{Wiersz}& Jest & Powinno być \\ \cline{2-3}
-    & Od góry & Od dołu &  &  \\ \hline
-    18 & 13 & & JózefTischner & Józef Tischner \\
-    20 & & 9 & dobra & dobra'' \\
-    29 & & 4 & deorsum'' & deorsum \\
-    39 & 8 & & stanie & stanu \\
-    % & & & & \\
-    % & & & & \\
-    % & & & & \\
-    % & & & & \\
-    % & & & & \\
-    \hline
-  \end{tabular}
-\end{center}
-\noi
-\StrWg{224}{2} \\
-\Jest sprawiedliwości.''., Paryż, Plon, II, 71). \\
-\Pow sprawiedliwości.'', (Paryż, Plon, II, 71). \\
-
-\vspace{\spaceTwo}
 
 
 
-
-
-\Work{
-  Jacques Maritain \\
-  ,,Trzej reformatorzy'', \cite{JMTR} }
-
-
-% Uwagi:\\
-% \begin{itemize}
-%
-% \item
-%
-% \item
-%
-% \end{itemize}
-
-\CenterTB{Błędy}
-\begin{center}
-  \begin{tabular}{|c|c|c|c|c|}
-    \hline
-    & \multicolumn{2}{c|}{} & & \\
-    Strona & \multicolumn{2}{c|}{Wiersz}& Jest & Powinno być \\ \cline{2-3}
-    & Od góry & Od dołu &  &  \\ \hline
-    & & & & \\
-    135 & 5 & & J ona & Jest ona \\
-    143 & 6 & & Dostojewski Andre & Dostojewski, Andre \\
-    % ,,
-    150 & & 1 & Heloizy'' ,,Stąd %''
-    % ,,
-           & Heloizy''. ,,Stąd \\ %''
-    173 & & 8 & kija obręczy & kija, obręczy \\
-    & & & & \\ \hline
-  \end{tabular}
-\end{center}
-
-Powinno być:
-\begin{itemize}
-\item[--] Str. 224. \ldots o które oskarża się z pokorą.
-\end{itemize}
 
 
 
 
 
 % ####################
-\Work{
-  Nakamura Hajime \\
+\Work{ % Autor i tytuł dzieła
+  Hajime Nakamura \\
   ,,Systemy myślenia ludów Wschodu. \\
   Indie, Chiny, Tybet, Japonia'',
   \cite{NakamuraSystemyMysleniaLudowWschodu05} }
@@ -358,23 +438,23 @@ czynności własnego ,,ja'' u~ludzi Zachodu czy~u~Indusów.
 
 
 % ####################
-\Work{
-  R\'{e}mi Brague \\
-  ,,Prawo Boga. Filozoficzna historia przymierza'',
-  \cite{BraguePrawoBoga14} }
+% \Work{
+%   R\'{e}mi Brague \\
+%   ,,Prawo Boga. Filozoficzna historia przymierza'',
+%   \cite{BraguePrawoBoga14} }
 
 
-\CenterTB{Błędy}
+% \CenterTB{Błędy}
 
-\noi
-\tb{Grzbiet} \\
-\Jest R \'{e}mi {\small Brague} \\
-\Pow R\'{e}mi Brague \\
-\tb{Tylna okładka} \\
-\Jest R\'{e}mi {\small Brague} \\
-\Pow R\'{e}mi Brague \\
+% \noi
+% \tb{Grzbiet} \\
+% \Jest R \'{e}mi {\small Brague} \\
+% \Pow R\'{e}mi Brague \\
+% \tb{Tylna okładka} \\
+% \Jest R\'{e}mi {\small Brague} \\
+% \Pow R\'{e}mi Brague \\
 
-\vspace{\spaceTwo}
+% \vspace{\spaceTwo}
 
 
 
