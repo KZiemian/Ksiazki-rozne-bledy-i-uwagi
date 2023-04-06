@@ -1,2 +1,2 @@
 # Ksiazki-rozne-bledy-i-uwagi
-Same te pliki wymagają poprawy.
+To repozytorium na razie nie wydaje się potrzebne.
